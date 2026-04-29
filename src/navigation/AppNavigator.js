@@ -27,9 +27,9 @@ export default function AppNavigator() {
           options={{ title: 'Agenda' }}
         />
         <Stack.Screen
-          name="AddTask"
+          name="AddEditTask"
           component={AddTaskScreen}
-          options={{ title: 'Nueva tarea' }}
+          options={{ title: 'Nueva Tarea' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
