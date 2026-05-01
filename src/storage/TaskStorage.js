@@ -6,4 +6,4 @@ export {
   getTaskById,
   getTasks,
   updateTask,
-} from '../storage/storage';
+} from './storage';

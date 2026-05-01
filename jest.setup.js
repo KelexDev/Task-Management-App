@@ -13,3 +13,19 @@ jest.mock('@react-native-async-storage/async-storage', () => ({
     mockStorage.clear();
   }),
 }));
+
+jest.mock('firebase/app', () => ({
+  initializeApp: jest.fn(() => ({ name: '[DEFAULT]' })),
+}));
+
+jest.mock('firebase/firestore', () => ({
+  addDoc: jest.fn(async () => ({ id: 'task-1' })),
+  collection: jest.fn(() => ({})),
+  deleteDoc: jest.fn(async () => {}),
+  doc: jest.fn(() => ({})),
+  getDocs: jest.fn(async () => ({ docs: [] })),
+  getFirestore: jest.fn(() => ({})),
+  orderBy: jest.fn(() => ({})),
+  query: jest.fn(() => ({})),
+  updateDoc: jest.fn(async () => {}),
+}));

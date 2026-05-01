@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from '../screens/HomeScreen';
-import AddTaskScreen from '../screens/AddTaskScreen';
+import Home from '../screens/Home';
+import AddEditTask from '../screens/AddEditTask';
 
 const Stack = createStackNavigator();
 
@@ -23,12 +23,12 @@ export default function AppNavigator() {
       >
         <Stack.Screen
           name="Home"
-          component={HomeScreen}
+          component={Home}
           options={{ title: 'Agenda' }}
         />
         <Stack.Screen
           name="AddEditTask"
-          component={AddTaskScreen}
+          component={AddEditTask}
           options={{ title: 'Nueva Tarea' }}
         />
       </Stack.Navigator>
